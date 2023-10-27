@@ -28,12 +28,21 @@ h1 {
   margin: 0;
 }
 h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0;
+}
+h3 {
   font-family: $font-mulish;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   color: $white;
   margin-top: 40px;
+}
+p {
+  margin: 0;
 }
 .container {
   max-width: 1230px;
@@ -127,7 +136,7 @@ h2 {
     align-items: flex-end;
     gap: 36px;
     margin-right: 26px;
-    & h2 {
+    & h3 {
       max-width: 330px;
       text-align: center;
       margin-right: 4.5vw;
@@ -151,6 +160,10 @@ h2 {
     width: 33px;
     height: 15px;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   &__next {
     background-image: url(/src/images/next.png);
@@ -159,5 +172,46 @@ h2 {
     width: 33px;
     height: 15px;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+.cabins {
+  display: flex;
+  margin: 8vw auto;
+  max-width: 76vw;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 5vw;
+  &__picture {
+    background-image: url(/src/images/cabins.png);
+    max-width: 693px;
+    width: 100%;
+    height: 438px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vw;
+    margin-left: 8.3vw;
+    max-width: 465px;
+    & p {
+      margin-top: 1.4vw;
+    }
+  }
+  &__link {
+    transition: 0.3s;
+    color: $forest;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    &:hover {
+      color: $gray;
+    }
   }
 }
