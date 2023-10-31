@@ -45,7 +45,7 @@ p {
   margin: 0;
 }
 .container {
-  max-width: 1230px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .header {
@@ -59,13 +59,13 @@ p {
   line-height: 24px;
   &__info {
     display: flex;
-    gap: 50px;
-    padding-left: 75px;
+    gap: 25px;
+    padding-left: 54px;
   }
   &__nav {
     list-style-type: none;
     display: flex;
-    gap: 30px;
+    gap: 35px;
     align-items: center;
     padding-left: 0;
     margin: 0;
@@ -120,6 +120,7 @@ p {
   flex-basis: 73px;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-left: 46px;
 }
 .banner {
   &__box {
@@ -127,8 +128,8 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    padding-top: 5vw;
-    padding-bottom: 22.7vw;
+    padding-top: 7vw;
+    padding-bottom: 27.7vw;
   }
   &__text {
     display: flex;
@@ -139,7 +140,7 @@ p {
     & h3 {
       max-width: 330px;
       text-align: center;
-      margin-right: 4.5vw;
+      margin-right: 6.5vw;
       margin-top: 0;
     }
   }
@@ -149,7 +150,7 @@ p {
     gap: 50px;
     justify-content: center;
     position: relative;
-    top: 17.5vw;
+    top: 23.5vw;
   }
 }
 .button {
@@ -180,8 +181,7 @@ p {
 }
 .cabins {
   display: flex;
-  margin: 8vw auto;
-  max-width: 76vw;
+  margin: 13.3vw auto 11.2vw;
   justify-content: space-between;
   align-items: flex-end;
   gap: 5vw;
@@ -198,15 +198,20 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1.3vw;
-    margin-left: 8.3vw;
-    max-width: 465px;
+    margin-left: 5.3vw;
+    max-width: 35%;
     & p {
-      margin-top: 1.4vw;
+      margin-top: 2.4vw;
+    }
+    & a {
+      font-style: italic;
     }
     &_forest {
       background-color: $bg-green;
       margin-left: 0;
-      padding: 8vw 7vw 8vw 6vw;
+      padding-top: 11vw;
+      padding-left: 7.5vw;
+      padding-right: 10vw;
     }
   }
   &__link {
@@ -222,7 +227,6 @@ p {
   &__flex {
     display: flex;
     justify-content: space-between;
-    max-width: 72vw;
     gap: 25px;
     margin: 0 auto 8vw;
     &_cover {
@@ -245,13 +249,12 @@ p {
 .forest {
   &__flex {
     display: flex;
-    margin: 8vw auto;
-    max-width: 76vw;
+    margin: 10vw auto 0vw;
     justify-content: space-between;
   }
   &__picture {
     &_cover {
-      width: 100%;
+      width: 47.5%;
       height: 650px;
       position: relative;
       overflow: hidden;
@@ -262,7 +265,7 @@ p {
         top: 50%;
         transform: translate(-50%, -50%);
         object-fit: cover;
-        object-position: left;
+        object-position: 15% 50%;
         width: 100%;
         height: 650px;
       }
@@ -286,8 +289,8 @@ p {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 37%;
-    left: 38%;
+    top: 36%;
+    left: 31%;
   }
   &__circle {
     width: 96px;
@@ -304,5 +307,192 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+.facilities {
+  background-color: $forest;
+  margin: 0 auto;
+  & h2 {
+    color: $white;
+    font-weight: 300;
+    text-align: center;
+    padding: 86px 0px 92px;
+  }
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60vw;
+    padding-bottom: 10.5vw;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: $white;
+    &::before {
+      content: '';
+      display: block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 70px;
+      width: 70px;
+    }
+    &_fridge::before {
+      background-image: url(/src/images/fridge\ 1.svg);
+    }
+    &_kitchen::before {
+      background-image: url(/src/images/kitchen\ 1.svg);
+    }
+    &_coffee::before {
+      background-image: url(/src/images/coffee.svg);
+    }
+    &_tea::before {
+      background-image: url(/src/images/tea.svg);
+    }
+  }
+}
+.photos {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &__cover {
+    width: 100%;
+    height: 559px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    & img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      width: 100%;
+      height: 559px;
+    }
+  }
+  &__circle {
+    position: absolute;
+    top: 36%;
+    left: 44%;
+    z-index: 1;
+    height: 157px;
+    width: 157px;
+    background-color: $white;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & a {
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+.footer {
+  background-color: $forest;
+  color: $white;
+  &__left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+  &__information {
+    display: flex;
+    justify-content: space-between;
+    max-width: 83vw;
+    margin: 0 auto;
+    padding-top: 7.3vw;
+  }
+  &__form {
+    display: flex;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1vw;
+  }
+  &__item {
+    & a {
+      text-decoration: none;
+      color: $white;
+      font-size: 14px;
+      line-height: 24px;
+      &::after {
+        display: block;
+        content: '';
+        height: 1px;
+        width: 0%;
+        background-color: $white;
+        bottom: 10px;
+        transition: width 0.4s ease-in-out;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.payment {
+  &__link {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3vw;
+    margin-top: 47px;
+    margin-bottom: 0;
+    &_item {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      cursor: pointer;
+      transition: 0.3s;
+      transform: scale(1);
+      opacity: 0.4;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+    &_mastercard {
+      background-image: url(/src/images/mastercard-logo.svg);
+      width: 48.7px;
+      height: 48.43px;
+    }
+    &_paypal {
+      background-image: url(/src/images/paypal-logo\ 1.svg);
+      width: 50.77px;
+      height: 50.41px;
+    }
+    &_visa {
+      background-image: url(/src/images/visa-logo.svg);
+      width: 48.17px;
+      height: 47.83px;
+    }
+    &_bank {
+      background-image: url(/src/images/bank-logo.svg);
+      width: 32.23px;
+      height: 32px;
+    }
   }
 }
