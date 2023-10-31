@@ -406,27 +406,37 @@ p {
 .footer {
   background-color: $forest;
   color: $white;
+  &__container {
+    max-width: 83vw;
+    margin: 0 auto;
+    padding: 7.3vw 0;
+  }
   &__left {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
+    flex-basis: 39%;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 43%;
+    gap: 47px;
   }
   &__information {
     display: flex;
     justify-content: space-between;
-    max-width: 83vw;
-    margin: 0 auto;
-    padding-top: 7.3vw;
   }
   &__form {
     display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
   }
   &__list {
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
-    gap: 1vw;
+    justify-content: space-between;
   }
   &__item {
     & a {
@@ -450,6 +460,9 @@ p {
       }
     }
   }
+  &__copy {
+    font-size: 14px;
+  }
 }
 .payment {
   &__link {
@@ -459,8 +472,7 @@ p {
     justify-content: flex-end;
     align-items: center;
     gap: 3vw;
-    margin-top: 47px;
-    margin-bottom: 0;
+    margin: 0;
     &_item {
       background-size: cover;
       background-repeat: no-repeat;
@@ -495,4 +507,58 @@ p {
       height: 32px;
     }
   }
+}
+.card {
+  &__input {
+    border: none;
+    display: block;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background-color: transparent;
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+  &__label {
+    flex-shrink: 0;
+    display: flex;
+    font-style: italic;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+    padding-right: 10px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 95%;
+    margin-bottom: 70px;
+    &_bold {
+      font-weight: 600;
+    }
+  }
+  &__button {
+    background-image: url(/src/images/button.svg);
+    width: 33px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 10px;
+    transform: scale(1);
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+hr {
+  color: #efefef;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 11px;
+}
+input {
+  all: unset;
 }
