@@ -856,9 +856,11 @@ p {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #333333;
 }
 .photos__circle a:hover {
   color: #000000;
+  font-weight: 600;
 }
 
 .footer {

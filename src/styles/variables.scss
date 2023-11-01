@@ -397,8 +397,10 @@ p {
       text-decoration: none;
       cursor: pointer;
       transition: 0.3s;
+      color: $gray;
       &:hover {
         color: $black;
+        font-weight: 600;
       }
     }
   }
